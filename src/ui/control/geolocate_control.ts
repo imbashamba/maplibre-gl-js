@@ -395,7 +395,7 @@ class GeolocateControl extends Evented implements IControl {
         if (this.options.showUserLocation) {
             this._dotElement = DOM.create('div', 'maplibregl-user-location-dot');
 
-            this._userLocationDotMarker = new Marker(this._dotElement);
+            this._userLocationDotMarker = new Marker({element: this._dotElement, pitchAlignment: 'map'});
 
             this._circleElement = DOM.create('div', 'maplibregl-user-location-accuracy-circle');
             this._accuracyCircleMarker = new Marker({element: this._circleElement, pitchAlignment: 'map'});
